@@ -27,7 +27,9 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.SubMenu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ProgressBar;
 
@@ -124,8 +126,8 @@ public class MainActivity extends AppActivity implements
     @BindView(R.id.nav_view)
     NavigationView mNavigationView;
 
-    @BindView(R.id.floating_search_view)
-    FloatingSearchView mSearchView;
+//    @BindView(R.id.floating_search_view)
+//    FloatingSearchView mSearchView;
 
     @BindView(R.id.progressbar)
     ProgressBar mProgressBar;
@@ -185,6 +187,9 @@ public class MainActivity extends AppActivity implements
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+//        Button toolbar = (Button) findViewById(R.id.toolbar);
+
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -201,8 +206,8 @@ public class MainActivity extends AppActivity implements
 
         final AppCompatActivity appCompatActivity = this;
 
-        mSearchView.attachNavigationDrawerToMenuButton(mDrawer);
-        mSearchView.setOnQueryChangeListener(mSearchListener.init(mMainFragment.getArguments()));
+//        mSearchView.attachNavigationDrawerToMenuButton(mDrawer);
+//        mSearchView.setOnQueryChangeListener(mSearchListener.init(mMainFragment.getArguments()));
 //        mSearchView.setOnMenuItemClickListener(new FloatingSearchView.OnMenuItemClickListener() {
 //            /**
 //             * Perform an action when a menu item is selected
@@ -235,9 +240,9 @@ public class MainActivity extends AppActivity implements
 
         mNavigationView.setNavigationItemSelectedListener(this);
         Menu menu = mNavigationView.getMenu();
-        MenuItem menuItem_switch_auto_rec = menu.findItem(R.id.nav_switch_auto_rec);
-        View actionView = MenuItemCompat.getActionView(menuItem_switch_auto_rec);
-        mSwitch_auto_rec = (SwitchCompat) actionView;
+//        MenuItem menuItem_switch_auto_rec = menu.findItem(R.id.nav_switch_auto_rec);
+//        View actionView = MenuItemCompat.getActionView(menuItem_switch_auto_rec);
+//        mSwitch_auto_rec = (SwitchCompat) actionView;
 
         if (mSwitch_auto_rec != null) {
             mSwitch_auto_rec.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -365,7 +370,7 @@ public class MainActivity extends AppActivity implements
 //            mFAB_ActionMode.setImageResource(R.drawable.ic_close_white);
 
         } else {
-            mSearchView.setVisibility(View.VISIBLE);
+//            mSearchView.setVisibility(View.VISIBLE);
             mTabs.setVisibility(View.VISIBLE);
 //            mFAB_ActionMode.setImageResource(R.drawable.ic_delete_white);
         }
@@ -395,20 +400,20 @@ public class MainActivity extends AppActivity implements
 
     @Subscribe(threadMode = ThreadMode.POSTING)
     protected void onLoadingBegin(OnLoadingBegin event) {
-        if (!mProgressBar.isShown()) {
-            mProgressBar.setVisibility(View.VISIBLE);
-        }
+//        if (!mProgressBar.isShown()) {
+//            mProgressBar.setVisibility(View.VISIBLE);
+//        }
     }
 
     @Subscribe(threadMode = ThreadMode.POSTING)
     protected void onLoadingDone(OnLoadingDone event) {
-        mHandlerToWait.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                mProgressBar.setVisibility(View.GONE);
-//                mSwipeContainer.setRefreshing(false);
-            }
-        }, 2000);
+//        mHandlerToWait.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                mProgressBar.setVisibility(View.GONE);
+////                mSwipeContainer.setRefreshing(false);
+//            }
+//        }, 2000);
     }
 
     /**

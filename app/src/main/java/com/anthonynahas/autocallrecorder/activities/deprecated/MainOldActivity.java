@@ -129,12 +129,12 @@ public class MainOldActivity extends AppCompatActivity {
         // Setup drawer view
         setupDrawerContent(nvDrawer);
         Menu menu = nvDrawer.getMenu();
-        MenuItem menuItem_switch_auto_rec = menu.findItem(R.id.nav_switch_auto_rec);
-        View actionView = MenuItemCompat.getActionView(menuItem_switch_auto_rec);
-        mSwitch_auto_rec = (SwitchCompat) actionView;
-        MenuItem menuItem_switch_auto_upload_on_DropBox = menu.findItem(R.id.nav_switch_auto_upload_on_dropbox);
-        View actionView2 = MenuItemCompat.getActionView(menuItem_switch_auto_upload_on_DropBox);
-        mSwitch_auto_upload_on_DropBox = (SwitchCompat) actionView2;
+//        MenuItem menuItem_switch_auto_rec = menu.findItem(R.id.nav_switch_auto_rec);
+//        View actionView = MenuItemCompat.getActionView(menuItem_switch_auto_rec);
+//        mSwitch_auto_rec = (SwitchCompat) actionView;
+//        MenuItem menuItem_switch_auto_upload_on_DropBox = menu.findItem(R.id.nav_switch_auto_upload_on_dropbox);
+//        View actionView2 = MenuItemCompat.getActionView(menuItem_switch_auto_upload_on_DropBox);
+//        mSwitch_auto_upload_on_DropBox = (SwitchCompat) actionView2;
 
         /*      ######## DROP BOX CORE API  ######## ------------------------------------------   */
 

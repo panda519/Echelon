@@ -215,6 +215,13 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
+    <string name="title_recording_setting">Record Setting</string>
+    <string name="action_all">All</string>
+    <string name="action_contants">Contants</string>
+    <string name="action_non_contents">Non Contants</string>
+
+    <string name="title_contants">Contents</string>
+    <string name="action_contant_new">Add</string>
 
     <!-- Statistic Activity -->
     <string name="title_activity_statistic">Statistic</string>
