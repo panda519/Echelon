@@ -37,6 +37,7 @@ import com.anthonynahas.autocallrecorder.configurations.Constant;
 import com.anthonynahas.autocallrecorder.dagger.annotations.android.HandlerToWaitForLoading;
 import com.anthonynahas.autocallrecorder.dagger.annotations.keys.activities.MainActivityKey;
 import com.anthonynahas.autocallrecorder.dagger.annotations.keys.fragments.RecordsFragementsLoveKey;
+import com.anthonynahas.autocallrecorder.dagger.annotations.keys.fragments.RecordsFragementsOtherKey;
 import com.anthonynahas.autocallrecorder.dagger.annotations.keys.fragments.RecordsFragmentsMainKey;
 import com.anthonynahas.autocallrecorder.events.loading.OnLoadingBegin;
 import com.anthonynahas.autocallrecorder.events.loading.OnLoadingDone;
@@ -81,6 +82,10 @@ public class MainActivity extends AppActivity implements
     @Inject
     @RecordsFragementsLoveKey
     RecordsFragment mLoveFragment;
+
+    @Inject
+    @RecordsFragementsOtherKey
+    RecordsFragment mOtherFragment;
 
     @Inject
     SearchListener mSearchListener;
@@ -432,6 +437,8 @@ public class MainActivity extends AppActivity implements
                     return mMainFragment;
                 case 1:
                     return mLoveFragment;
+                case 2:
+                    return mOtherFragment;
                 default:
                     return null;
             }
@@ -444,8 +451,8 @@ public class MainActivity extends AppActivity implements
          */
         @Override
         public int getCount() {
-            // Show 2 total pages (TABS).
-            return 2;
+            // Show 3 total pages (TABS).
+            return 3;
         }
 
         /**
@@ -461,6 +468,8 @@ public class MainActivity extends AppActivity implements
                     return getString(R.string.page_title_records);
                 case 1:
                     return getString(R.string.page_title_favorite);
+                case 2:
+                    return getString(R.string.page_title_other);
                 default:
                     return null;
             }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Auto Call Recorder</string>
+    <string name="app_name">Echelon</string>
     <string name="app_version" translatable="false">Version 1.0</string>
 
     <!-- Drawer layout -->
@@ -208,6 +208,7 @@
     <string name="action_unlock">Unlock recordtring</string>
     <string name="page_title_records">Records</string>
     <string name="page_title_favorite">Favorites</string>
+    <string name="page_title_other">Others</string>
     <string name="radiobutton_time">Time</string>
 
     <string name="title_home">Home</string>

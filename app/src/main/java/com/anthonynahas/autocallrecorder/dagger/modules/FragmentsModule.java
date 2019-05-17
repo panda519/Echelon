@@ -2,6 +2,7 @@ package com.anthonynahas.autocallrecorder.dagger.modules;
 
 import com.anthonynahas.autocallrecorder.configurations.Config;
 import com.anthonynahas.autocallrecorder.dagger.annotations.keys.fragments.RecordsFragementsLoveKey;
+import com.anthonynahas.autocallrecorder.dagger.annotations.keys.fragments.RecordsFragementsOtherKey;
 import com.anthonynahas.autocallrecorder.dagger.annotations.keys.fragments.RecordsFragmentsMainKey;
 import com.anthonynahas.autocallrecorder.fragments.RecordsFragment;
 
@@ -39,4 +40,15 @@ public class FragmentsModule {
         loveFragment.hasFocus = false;
         return loveFragment;
     }
+
+    @Provides
+    @Singleton
+    @RecordsFragementsOtherKey
+    RecordsFragment provideRecordsFragementsOther(Config config) {
+        RecordsFragment otherFragment = RecordsFragment.newInstance(config.record_fragment_other);
+        otherFragment.position = 1;
+        otherFragment.hasFocus = false;
+        return otherFragment;
+    }
+
 }
