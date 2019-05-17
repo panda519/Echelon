@@ -250,11 +250,11 @@ public class RecordsListFragment extends Fragment implements
         mAdapter = new RecordsCursorRecyclerViewAdapter(mContext, null);
         mRecyclerView.setAdapter(mAdapter);
         // set fab handler for the recycler view
-        if (getActivity() instanceof MainActivity) {
-            FABHandler.newInstance().init(mRecyclerView,
-                    ((MainActivity) getActivity()).getFAB_ActionMode(),
-                    (FloatingActionButton) mView.findViewById(R.id.fab_scroll_to_top));
-        }
+//        if (getActivity() instanceof MainActivity) {
+//            FABHandler.newInstance().init(mRecyclerView,
+//                    ((MainActivity) getActivity()).getFAB_ActionMode(),
+//                    (FloatingActionButton) mView.findViewById(R.id.fab_scroll_to_top));
+//        }
 
 //        RecordsQueryHandler.getInstance(mContext.getContentResolver()).setAdapter(mAdapter);
         mSwipeContainer.setOnRefreshListener(this);

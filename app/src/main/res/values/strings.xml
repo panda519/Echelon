@@ -206,7 +206,7 @@
     <string name="action_share">share</string>
     <string name="action_lock">Lock record</string>
     <string name="action_unlock">Unlock recordtring</string>
-    <string name="page_title_records">Records</string>
+    <string name="page_title_records">All</string>
     <string name="page_title_favorite">Favorites</string>
     <string name="page_title_other">Others</string>
     <string name="radiobutton_time">Time</string>

@@ -130,8 +130,8 @@ public class MainActivity extends AppActivity implements
     @BindView(R.id.progressbar)
     ProgressBar mProgressBar;
 
-    @BindView(R.id.fab_go_in_action_mode)
-    FloatingActionButton mFAB_ActionMode;
+//    @BindView(R.id.fab_go_in_action_mode)
+//    FloatingActionButton mFAB_ActionMode;
 
     @StringRes
     int mNavDrawerOpen = R.string.navigation_drawer_open;
@@ -142,7 +142,7 @@ public class MainActivity extends AppActivity implements
     /**
      * Notify all receiver that the app is going in action mode
      */
-    @OnClick(R.id.fab_go_in_action_mode)
+//    @OnClick(R.id.fab_go_in_action_mode)
     protected void notifyOnActionMode() {
         sIsInActionMode = !sIsInActionMode;
 
@@ -203,35 +203,35 @@ public class MainActivity extends AppActivity implements
 
         mSearchView.attachNavigationDrawerToMenuButton(mDrawer);
         mSearchView.setOnQueryChangeListener(mSearchListener.init(mMainFragment.getArguments()));
-        mSearchView.setOnMenuItemClickListener(new FloatingSearchView.OnMenuItemClickListener() {
-            /**
-             * Perform an action when a menu item is selected
-             *
-             * @param item the selected item
-             */
-            @Override
-            public void onActionMenuItemSelected(MenuItem item) {
-                int id = item.getItemId();
-
-                //noinspection SimplifiableIfStatement
-                switch (id) {
-                    case R.id.action_add_demo_record:
-                        mInputDialog.show(mAppCompatActivity, "Contact ID");
-                        break;
-                    case R.id.action_start_sample_animations:
-                        startActivity(new Intent(getApplicationContext(), SampleMainActivity.class));
-                        break;
-                    case R.id.action_sort:
-                        mDialogHelper.openSortDialog(appCompatActivity, mSectionsPagerAdapter.getItem(0));
-                        break;
-                    case R.id.action_settings:
-                        startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
-                        break;
-                    default:
-                        break;
-                }
-            }
-        });
+//        mSearchView.setOnMenuItemClickListener(new FloatingSearchView.OnMenuItemClickListener() {
+//            /**
+//             * Perform an action when a menu item is selected
+//             *
+//             * @param item the selected item
+//             */
+//            @Override
+//            public void onActionMenuItemSelected(MenuItem item) {
+//                int id = item.getItemId();
+//
+//                //noinspection SimplifiableIfStatement
+//                switch (id) {
+//                    case R.id.action_add_demo_record:
+//                        mInputDialog.show(mAppCompatActivity, "Contact ID");
+//                        break;
+//                    case R.id.action_start_sample_animations:
+//                        startActivity(new Intent(getApplicationContext(), SampleMainActivity.class));
+//                        break;
+//                    case R.id.action_sort:
+//                        mDialogHelper.openSortDialog(appCompatActivity, mSectionsPagerAdapter.getItem(0));
+//                        break;
+//                    case R.id.action_settings:
+//                        startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
+//                        break;
+//                    default:
+//                        break;
+//                }
+//            }
+//        });
 
         mNavigationView.setNavigationItemSelectedListener(this);
         Menu menu = mNavigationView.getMenu();
@@ -360,23 +360,23 @@ public class MainActivity extends AppActivity implements
      */
     public void handleActionMode(boolean isInActionMode) {
         if (isInActionMode) {
-            mSearchView.setVisibility(View.GONE);
-            mTabs.setVisibility(View.GONE);
-            mFAB_ActionMode.setImageResource(R.drawable.ic_close_white);
+//            mSearchView.setVisibility(View.GONE);
+//            mTabs.setVisibility(View.GONE);
+//            mFAB_ActionMode.setImageResource(R.drawable.ic_close_white);
 
         } else {
             mSearchView.setVisibility(View.VISIBLE);
             mTabs.setVisibility(View.VISIBLE);
-            mFAB_ActionMode.setImageResource(R.drawable.ic_delete_white);
+//            mFAB_ActionMode.setImageResource(R.drawable.ic_delete_white);
         }
 
         sIsInActionMode = isInActionMode;
     }
 
 
-    public FloatingActionButton getFAB_ActionMode() {
-        return mFAB_ActionMode;
-    }
+//    public FloatingActionButton getFAB_ActionMode() {
+//        return mFAB_ActionMode;
+//    }
 
     @Override
     public void onTabSelected(TabLayout.Tab tab) {
