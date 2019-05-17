@@ -1,0 +1,235 @@
+<resources>
+    <string name="app_name">Auto Call Recorder</string>
+    <string name="app_version" translatable="false">Version 1.0</string>
+
+    <!-- Drawer layout -->
+    <string name="drawer_opened" translatable="false">Drawer Opened</string>
+    <string name="drawer_closed" translatable="false">Drawer Closed</string>
+
+    <!-- NavigationView -->
+    <string name="item_home">Records</string>
+    <string name="item_share">Share App</string>
+    <string name="action_view_switch_auto_rec">Auto recording</string>
+    <string name="action_view_switch_dropbox">Auto upload on DropBox</string>
+
+    <!-- Layout -->
+    <string name="image_view_profile" translatable="false">profile picture of (unkown)-contact</string>
+
+    <!-- Menu -->
+    <string name="action_search">Search</string>
+    <string name="action_add">Add</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_sort">Sort</string>
+
+    <!-- standards -->
+    <string name="call_number_std" translatable="false">+000000000000</string>
+    <string name="call_date_std" translatable="false">00-00-0000</string>
+    <string name="call_duration_std" translatable="false">00:00</string>
+
+    <!-- Dropbox -->
+    <string name="dropbox_header" translatable="false">Dropbox</string>
+
+    <!-- Sort dialog -->
+    <string name="sort_dialog_title">Sort by</string>
+    <string name="radiobutton_contact">Contact</string>
+    <string name="radiobutton_date">Date</string>
+    <string name="radiobutton_duration">Duration</string>
+    <string name="radiobtton_asc">Ascending</string>
+    <string name="radiobtton_desc">Descending</string>
+    <string name="sort_dialog_negative_button">Cancel</string>
+    <string name="sort_dialog_positive_button">Finish</string>
+
+    <!-- searchable.xml -->
+    <string name="app_label" translatable="false">App label</string>
+    <string name="search_hint">Serach hint</string>
+
+
+    <!-- Progress dialog -->
+    <string name="pd_msg" translatable="true">Please wait…</string>
+    <string name="pd_deleted" translatable="true">has been deleted</string>
+
+    <!-- Toast msgs -->
+    <string name="tst_list_empty" translatable="true">There is no records to delete!</string>
+    <string name="title_activity_main_tabs">MainTabsActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="toolbar_action_mode_text">Selection of recordings</string>
+
+    <!-- Strings related to Settings ########################################################### -->
+
+    <!-- General settings -->
+
+    <!-- Settings Preference -->
+    <string name="title_activity_settings">Settings</string>
+
+    <string name="preference_category1" translatable="true">Recording Settings</string>
+    <string name="preference_checkbox_auto_call_recording" translatable="true">Always record calls</string>
+    <string name="preference_checkbox_auto_call_recording_summary" translatable="true">Check it to enable</string>
+    <string name="preference_checkbox_upload_on_dropbox" translatable="true">Always upload on dropbox</string>
+    <string name="preference_checkbox_upload_on_dropbox_summary" translatable="true">ONLY when connected to the internet</string>
+    <string name="preference_dropxbox_folder_name" translatable="true">Folder name on DropBox</string>
+    <string name="preference_dropxbox_folder_name_summary" translatable="false">Auto Call Recorder</string>
+    <string name="preference_category2" translatable="true">Other Settings</string>
+
+    <string name="pref_header_general">General</string>
+
+    <!--switch pref general auto call record-->
+    <string name="pref_title_auto_call_recording">Enable auto record calls</string>
+    <string name="pref_description_auto_call_recording">If you make or receive a call,
+        the app will try to record the call
+    </string>
+
+    <!--switch pref general move record to recycle bin-->
+    <string name="pref_title_move_first_to_recycle_bin">Recycle bin</string>
+    <string name="pref_description_move_first_to_recycle_bin">Before deleting the records,
+        move them first to the recycle bin
+    </string>
+
+    <string name="pref_title_can_add_to_library">Music Library</string>
+    <string name="pref_description_can_add_to_library">Add recording to music library
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_audio_source">Audio Source</string>
+    <string-array name="pref_general_audio_source">
+        <item>DEFAULT</item>
+        <item>MIC</item>
+        <item>UNPROCESSED</item>
+        <item>VOICE_CALL</item>
+        <item>VOICE_COMMUNICATION</item>
+        <item>VOICE_RECOGNITION</item>
+    </string-array>
+    <string-array name="pref_general_audio_source_values">
+        <item>0</item>
+        <item>1</item>
+        <item>9</item>
+        <item>4</item>
+        <item>7</item>
+        <item>6</item>
+    </string-array>
+
+    <string name="pref_title_output_format">Output Format</string>
+    <string-array name="pref_general_output_format">
+        <item>DEFAULT</item>
+        <item>THREE_GPP</item>
+        <item>AAC_ADTS</item>
+        <item>AMR_NB</item>
+        <item>AMR_WB</item>
+        <item>MPEG_4</item>
+    </string-array>
+    <string-array name="pref_general_output_format_values">
+        <item>0</item>
+        <item>1</item>
+        <item>6</item>
+        <item>3</item>
+        <item>4</item>
+        <item>2</item>
+    </string-array>
+
+    <string name="pref_title_audio_encoder">Audio Encoder</string>
+    <string-array name="pref_general_audio_encoder">
+        <item>DEFAULT</item>
+        <item>AAC</item>
+        <item>AAC_ELD</item>
+        <item>AMR_NB</item>
+        <item>AMR_WB</item>
+        <item>HE_AAC</item>
+        <item>VORBIS</item>
+    </string-array>
+    <string-array name="pref_general_audio_encoder_values">
+        <item>0</item>
+        <item>3</item>
+        <item>5</item>
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+        <item>6</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="all">all</string>
+    <string name="incoming">incoming</string>
+    <string name="outgoing">outgoing</string>
+    <string name="close">close</string>
+    <string name="action_share">share</string>
+    <string name="action_lock">Lock record</string>
+    <string name="action_unlock">Unlock recordtring</string>
+    <string name="page_title_records">Records</string>
+    <string name="page_title_favorite">Favorites</string>
+    <string name="radiobutton_time">Time</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+
+    <!-- Statistic Activity -->
+    <string name="title_activity_statistic">Statistic</string>
+
+    <!-- Locked Records Activity -->
+    <string name="title_activity_locked_records">Locked Records</string>
+
+    <!--Rubbished Records Activity -->
+    <string name="title_activity_rubbished_records">Rubbished Records</string>
+
+    <!-- Single Contact Record Activity -->
+    <string name="title_activity_single_contact_record">UNKNOWN</string>
+
+    <string name="title_activity_contact_fullscreen">ContactFullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+
+</resources>

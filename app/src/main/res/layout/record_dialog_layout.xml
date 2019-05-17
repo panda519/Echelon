@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:orientation="vertical">
+
+    <!--
+    <include layout="@layout/action_mode_toolbar_layout"></include>
+    -->
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_rec_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:fitsSystemWindows="true"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ToolbarTheme2"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+        <Button
+            android:id="@+id/button_rec_dialog_close"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/close"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+
+        <com.anthonynahas.autocallrecorder.views.RoundedImageView
+            android:id="@+id/img_profile_recDialog"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/image_view_profile"
+            android:scaleType="fitXY"
+            android:tag="contact_profile_pic" />
+
+        <TextView
+            android:id="@+id/contact_name_number_recDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="normal" />
+
+        <SeekBar
+            android:id="@+id/seekbar_rec"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/tv_duration_rec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center">
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_play_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="3dp"
+                android:src="@android:drawable/ic_media_play"
+                app:fabSize="mini" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_toLeftOf="@id/fab_play_pause"
+                android:src="@android:drawable/ic_menu_delete"
+                app:backgroundTint="@android:color/darker_gray"
+                app:fabSize="mini" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_toLeftOf="@id/fab_delete"
+                android:src="@android:drawable/ic_menu_share"
+                app:backgroundTint="@android:color/holo_blue_light"
+                app:fabSize="mini" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_toLeftOf="@id/fab_share"
+                android:src="@android:drawable/ic_menu_call"
+                app:backgroundTint="@android:color/holo_green_dark"
+                app:fabSize="mini" />
+
+            <!--
+            <ImageButton
+                android:id="@+id/imgButton_rec_play_pause"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_media_play"/>
+                -->
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

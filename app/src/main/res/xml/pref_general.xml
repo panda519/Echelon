@@ -1,0 +1,63 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="AUTO_RECORD"
+        android:summary="@string/pref_description_auto_call_recording"
+        android:title="@string/pref_title_auto_call_recording" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="TO_MOVE_IN_RECYCLE_BIN"
+        android:summary="@string/pref_description_move_first_to_recycle_bin"
+        android:title="@string/pref_title_move_first_to_recycle_bin" />
+
+    <!-- NOTE: EditTextPreference accepts EditText attributes. -->
+    <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->
+    <EditTextPreference
+        android:capitalize="words"
+        android:defaultValue="@string/pref_default_display_name"
+        android:inputType="textCapWords"
+        android:key="example_text"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/pref_title_display_name" />
+
+    <!-- NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
+         dismiss it. -->
+    <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
+    <ListPreference
+        android:defaultValue="7"
+        android:entries="@array/pref_general_audio_source"
+        android:entryValues="@array/pref_general_audio_source_values"
+        android:key="AUDIO_SOURCE"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_audio_source" />
+
+    <ListPreference
+        android:defaultValue="6"
+        android:entries="@array/pref_general_output_format"
+        android:entryValues="@array/pref_general_output_format_values"
+        android:key="OUTPUT_FORMAT"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_output_format" />
+
+    <ListPreference
+        android:defaultValue="4"
+        android:entries="@array/pref_general_audio_encoder"
+        android:entryValues="@array/pref_general_audio_encoder_values"
+        android:key="AUDIO_ENCODER"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="@string/pref_title_audio_encoder" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="ADD_TO_MUSIC_LIBRARY"
+        android:summary="@string/pref_title_can_add_to_library"
+        android:title="@string/pref_description_can_add_to_library" />
+
+</PreferenceScreen>

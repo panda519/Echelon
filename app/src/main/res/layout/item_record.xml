@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/list_item_background_activated">
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:animateLayoutChanges="true"
+        />
+
+        <com.anthonynahas.autocallrecorder.views.RoundedImageView
+            android:id="@+id/iv_profile"
+            android:src="@drawable/custmtranspprofpic200px"
+            android:scaleType="fitXY"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:contentDescription="@string/image_view_profile"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/layout_list_cell_heigh"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/iv_profile"
+            android:layout_toEndOf="@+id/iv_profile"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:animateLayoutChanges="true">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true">
+
+                <TextView
+                    android:id="@+id/tv_call_contact_name_or_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="@string/call_number_std"
+                    android:maxLines="1"
+                    android:textColor="@android:color/black"/>
+
+                <ImageView
+                    android:id="@+id/iv_call_is_incoming"
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:background="@android:color/background_light"
+                    android:layout_toEndOf="@+id/tv_call_contact_name_or_number"
+                    android:contentDescription="for incoming or outgoing call"
+                    android:layout_toRightOf="@+id/tv_call_contact_name_or_number" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_call_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:text="@string/call_date_std"
+                android:textColor="@android:color/black"/>
+
+        </LinearLayout>
+
+    <RelativeLayout
+        android:gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/layout_list_cell_heigh"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true">
+
+
+        <TextView
+            android:id="@+id/tv_call_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:text="@string/call_duration_std"
+            android:textColor="@android:color/black"/>
+
+    </RelativeLayout>
+</RelativeLayout>
