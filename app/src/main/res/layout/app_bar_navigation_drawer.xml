@@ -17,38 +17,39 @@
         android:background="@color/defaultColor"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:layout_margin="10dp"
+            android:layout_height="40dp"
             android:minHeight="?attr/actionBarSize"
             android:orientation="horizontal"
-            android:weightSum="10">
+            android:gravity="center_vertical">
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="15dp"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"/>
+                android:layout_marginRight="5dp"
+                android:paddingTop="5dp"
+                android:layout_alignParentLeft="true" />
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
                 android:text="@string/app_name"
                 android:textColor="@android:color/white"
-                android:layout_gravity="center_vertical"
-                android:textSize="32dp"
-                android:layout_weight="8"/>
+                android:textSize="25dp"
+                android:layout_toRightOf="@+id/toolbar"
+                android:layout_toLeftOf="@+id/nav_search_btn"/>
             <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:id="@+id/nav_search_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
                 android:background="@drawable/ic_search"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"/>
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
         <!--<SearchView-->
             <!--android:id="@+id/floating_search_view"-->
@@ -67,7 +68,7 @@
             android:id="@+id/tabs"
             style="@style/SelectableItemBackground"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:background="?attr/selectableItemBackground"
             app:tabIndicatorColor="@android:color/white"
             app:tabSelectedTextColor="@android:color/white"

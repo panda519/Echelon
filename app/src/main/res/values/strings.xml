@@ -41,6 +41,8 @@
     <string name="sort_dialog_negative_button">Cancel</string>
     <string name="sort_dialog_positive_button">Finish</string>
 
+    <string name="auto_record">Auto Recording</string>
+
     <!-- searchable.xml -->
     <string name="app_label" translatable="false">App label</string>
     <string name="search_hint">Serach hint</string>

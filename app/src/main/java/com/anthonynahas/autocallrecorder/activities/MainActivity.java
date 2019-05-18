@@ -25,7 +25,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SwitchCompat;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.ContextMenu;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
@@ -141,6 +143,8 @@ public class MainActivity extends AppActivity implements
     @StringRes
     int mNavDrawerClose = R.string.navigation_drawer_close;
 
+    Button mBtnSearch;
+
     /**
      * Notify all receiver that the app is going in action mode
      */
@@ -174,6 +178,12 @@ public class MainActivity extends AppActivity implements
      */
     private SectionsPagerAdapter mSectionsPagerAdapter;
 
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.activity_navigation_new, menu);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -182,6 +192,15 @@ public class MainActivity extends AppActivity implements
         setContentView(R.layout.activity_main_navigation_drawer_tabs);
 
         ButterKnife.bind(this);
+
+        mBtnSearch = (Button)findViewById(R.id.nav_search_btn);
+        mBtnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this , SearchActivity.class);
+                startActivity(i);
+            }
+        });
 
         mAppCompatActivity = this;
 

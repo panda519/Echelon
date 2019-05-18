@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="@string/title_recording_setting">
-        <menu>
-            <group android:id="@+id/nav_setting_group"
-                android:checkableBehavior="single">
-                <item
-                    android:id="@+id/nav_action_all"
-                    android:title="@string/action_all"/>
+    <!--<item android:title="@string/title_recording_setting">-->
+        <!--<menu>-->
+            <!--<group android:id="@+id/nav_setting_group"-->
+                <!--android:checkableBehavior="single">-->
+                <!--<item-->
+                    <!--android:id="@+id/nav_action_all"-->
+                    <!--android:title="@string/action_all"/>-->
 
-                <item
-                    android:id="@+id/nav_action_contant"
-                    android:title="@string/action_contants"/>
+                <!--<item-->
+                    <!--android:id="@+id/nav_action_contant"-->
+                    <!--android:title="@string/action_contants"/>-->
 
-                <item
-                    android:id="@+id/nav_action_non_contant"
-                    android:title="@string/action_non_contents"/>
-            </group>
-        </menu>
-    </item>
+                <!--<item-->
+                    <!--android:id="@+id/nav_action_non_contant"-->
+                    <!--android:title="@string/action_non_contents"/>-->
+            <!--</group>-->
+        <!--</menu>-->
+    <!--</item>-->
 
-    <item
-        android:id="@+id/nav_rate_me"
-        android:icon="@drawable/ic_star_border"
-        android:title="rate me" />
+    <!--<item-->
+        <!--android:id="@+id/nav_rate_me"-->
+        <!--android:icon="@drawable/ic_star_border"-->
+        <!--android:title="rate me" />-->
+    <!--<group android:checkableBehavior="single">-->
+        <!--<item android:id="@+id/q" android:title="asdf"></item>-->
+        <!--<item android:id="@+id/w" android:title="wer"></item>-->
+        <!--<item android:id="@+id/e" android:title="wert"></item>-->
+    <!--</group>-->
 </menu>

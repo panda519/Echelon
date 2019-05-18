@@ -30,6 +30,7 @@ import dagger.multibindings.IntoMap;
         {
                 AppActivitySubcomponent.class,
                 MainActivitySubcomponent.class,
+                MainActivitySubcomponent.class,
                 RecordsActivitySubcomponent.class,
                 StatisticActivitySubcomponent.class,
                 SingleContactRecordActivitySubcomponent.class

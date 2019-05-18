@@ -45,6 +45,8 @@
         <activity
             android:name=".activities.RecordsActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".activities.SearchActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".activities.StatisticActivity" />
 
         <activity

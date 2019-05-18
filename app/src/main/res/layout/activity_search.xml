@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical">
+    <RelativeLayout
+        android:id="@+id/search_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/defaultColor"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/action_search_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/backicon"/>
+
+        <EditText
+            android:id="@+id/action_search_text"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_toLeftOf="@+id/action_search_clean"
+            android:layout_toRightOf="@+id/action_search_back"
+            android:textColor="@android:color/white"
+            android:hint="Search..."
+            android:cursorVisible="true"
+            android:textSize="25dp"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:textColorHint="@color/hintcolor"/>
+
+        <Button
+            android:id="@+id/action_search_clean"
+            android:padding="5dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/closeicon"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <!--<android.support.v7.widget.Toolbar-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="?attr/actionBarSize">-->
+        <!---->
+    <!--</android.support.v7.widget.Toolbar>-->
+
+</android.support.constraint.ConstraintLayout>

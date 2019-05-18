@@ -3,31 +3,124 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/nav_header_height"
-    android:background="@color/defaultColor"
-    android:gravity="bottom"
-    android:orientation="horizontal"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_header_height"
+        android:orientation="horizontal"
+        android:paddingTop="25dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:background="@color/defaultColor">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/custmtranspprofpic" />
+    
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:textSize="30dp"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+    </LinearLayout>
+    
+    <Switch
+        android:id="@+id/nav_auto_rec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="20dp"
+        android:text="@string/auto_record"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:theme="@style/SCBSwitch"/>
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_vertical"
-        app:srcCompat="@drawable/custmtranspprofpic" />
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/darker_gray"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginLeft="10dp"
-        android:textSize="30dp"
-        android:text="@string/app_name"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:text="Contant Setting"
+        android:textSize="25dp"
+        android:textColor="@android:color/darker_gray"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:orientation="vertical">
 
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        <RadioButton
+            android:id="@+id/nav_contant_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_all"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:checked="true"
+            android:buttonTint="@color/defaultColor"/>
+
+        <RadioButton
+            android:id="@+id/nav_contant_only"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_contants"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:buttonTint="@color/defaultColor"/>
+
+        <RadioButton
+            android:id="@+id/nav_contant_non"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_non_contents"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:buttonTint="@color/defaultColor"/>
+
+    </RadioGroup>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/darker_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/helpicon"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/nav_about"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:text="About"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
 
 </LinearLayout>
